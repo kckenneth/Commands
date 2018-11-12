@@ -9,6 +9,13 @@ This is a list of useful commands that I found very handy in time.
 kill -9 <PID>
 ```
 
+if on CentOS
 ```
+# yum install net-tools
+# netstat -tnlp
+```
+if on Ubuntu
+```
+# apt-get install net-tools
 # netstat -tnlp
 ```
