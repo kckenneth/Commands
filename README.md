@@ -31,4 +31,12 @@ if on CentOS
 # yum install net-tools
 # netstat -tnlp
 ```
+### Export PATH
+
+Better explanation on how <a href=https://stackoverflow.com/questions/13978654/export-path-in-profile-on-mac>export PATH works</a>. 
+
+To quickly check the path
+```
+# echo $PATH
+```
 
