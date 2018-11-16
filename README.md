@@ -72,10 +72,27 @@ $ nc whois.cymru.com 43
 AS | IP | AS Name
 32 | 171.67.215.200 | STANFORD - Stanford University, US
 ```
+Find the Owner of the IP address, AS, prefix
+```
+$ whois -h whois.ra.net 171.67.215.200
 
+route:      171.64.0.0/14
+descr:      AS32 proxy-registered route by Cogent
+origin:     AS32
+remarks:    Proxy-registered route object
+remarks:    for Cogent customer
+notify:     neteng@cogentco.com
+mnt-by:     MAINT-AS174
+changed:    neteng@cogentco.com 20031230
+source:     RADB
+```
 
-Checking the network configuration
+Check the network configuration
 ```
 $ ifconfig
 ```
 
+Check the hop
+```
+$ traceroute -a stanford.edu
+```
