@@ -43,3 +43,39 @@ To quickly check the path
 
 More <a href=https://github.com/kckenneth/Docker/blob/master/README.md>Here</a>.
 
+### Internet TCP
+
+tested on Mac
+```
+$ netstat -p TCP
+
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+tcp4       0      0  localhost.29961        localhost.60258        ESTABLISHED
+tcp4       0      0  localhost.60258        localhost.29961        ESTABLISHED
+tcp4       0      0  10.0.0.3.60257         counteract.rocke.10005 SYN_SENT 
+```
+
+Checking the AS (Autonomous System)
+
+```
+$ dig stanford.edu
+
+;; ANSWER SECTION:
+stanford.edu.		1473	IN	A	171.67.215.200
+```
+Check the `ANSWER SECTION` and note the IP. Use the IP to look up the AS with netcat `nc` command. 
+```
+$ nc whois.cymru.com 43
+171.67.215.200
+
+AS | IP | AS Name
+32 | 171.67.215.200 | STANFORD - Stanford University, US
+```
+
+
+Checking the network configuration
+```
+$ ifconfig
+```
+
