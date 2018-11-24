@@ -96,3 +96,23 @@ Check the hop
 ```
 $ traceroute -a stanford.edu
 ```
+
+### SSH key 
+
+Create ssh private and public key
+```
+$ ssh-keygen -f ~/.ssh/id_rsa -b 2048 -t rsa 
+```
+This will create id_rsa and id_rsa.pub keys. 
+
+Copy public key to a remote host  
+If you want to ssh without password, you need to copy the public key to a remote host. 
+```
+$ ssh-copy-id username@remote-host
+```
+Block ssh password login in the remote host, in remote host, change the `PasswordAuthentication` to `no`. If commented by `#`, uncomment. 
+```
+# sudo nano /etc/ssh/sshd_config
+
+PasswordAuthentication no
+```
