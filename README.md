@@ -15,6 +15,35 @@ CentOS
 /lib/systemd/systemd: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=74584540f9e94865453495ad93b2954e7b07f5c6, stripped
 ```
 
+### SSH key 
+
+Create ssh private and public key
+```
+$ ssh-keygen -f ~/.ssh/id_rsa -b 2048 -t rsa 
+```
+This will create id_rsa and id_rsa.pub keys. 
+
+Copy public key to a remote host  
+If you want to ssh without password, you need to copy the public key to a remote host. 
+```
+$ ssh-copy-id username@remote-host
+```
+Block ssh password login in the remote host, in remote host, change the `PasswordAuthentication` to `no`. If commented by `#`, uncomment. 
+```
+# sudo nano /etc/ssh/sshd_config
+
+PasswordAuthentication no
+```
+
+On Ubuntu/Debian:
+```
+# sudo service ssh restart
+```
+On CentOS/Fedora:
+```
+# sudo service sshd restart
+```
+
 ### Check the ssh connection and kill it by PID
 
 ```
@@ -97,22 +126,4 @@ Check the hop
 $ traceroute -a stanford.edu
 ```
 
-### SSH key 
 
-Create ssh private and public key
-```
-$ ssh-keygen -f ~/.ssh/id_rsa -b 2048 -t rsa 
-```
-This will create id_rsa and id_rsa.pub keys. 
-
-Copy public key to a remote host  
-If you want to ssh without password, you need to copy the public key to a remote host. 
-```
-$ ssh-copy-id username@remote-host
-```
-Block ssh password login in the remote host, in remote host, change the `PasswordAuthentication` to `no`. If commented by `#`, uncomment. 
-```
-# sudo nano /etc/ssh/sshd_config
-
-PasswordAuthentication no
-```
