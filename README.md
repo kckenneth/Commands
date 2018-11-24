@@ -17,6 +17,7 @@ CentOS
 
 ### SSH key 
 
+More <a href=https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys>Details.</a>  
 Create ssh private and public key
 ```
 $ ssh-keygen -f ~/.ssh/id_rsa -b 2048 -t rsa 
