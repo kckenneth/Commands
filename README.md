@@ -45,6 +45,12 @@ On CentOS/Fedora:
 # sudo service sshd restart
 ```
 
+### Hardening the server
+
+You need to protect your server from multiple attacks. Even if you setup the ssh and password, there always will be bot attack. `Fail2Ban` is an daemon app you'd install in your remote server to block multiple failed attempts.  
+
+<a href=https://www.linode.com/docs/security/securing-your-server/>Setup</a>
+
 ### Check the ssh connection and kill it by PID
 
 ```
