@@ -49,7 +49,8 @@ On CentOS/Fedora:
 
 You need to protect your server from multiple attacks. Even if you setup the ssh and password, there always will be bot attack. `Fail2Ban` is an daemon app you'd install in your remote server to block multiple failed attempts.  
 
-<a href=https://www.linode.com/docs/security/securing-your-server/>Setup</a>
+- This is from DigitalOcean how to <a href=https://www.linode.com/docs/security/securing-your-server/>Setup</a>.  
+- This is my detailed <a href=https://github.com/kckenneth/Hardening/blob/master/README.md>Setup</a>.  
 
 ### Check the ssh connection and kill it by PID
 
