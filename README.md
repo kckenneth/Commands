@@ -58,9 +58,9 @@ You need to change the Linux PAM (Pluggable Authentication Module)
 
 The following 3 lines are required to implement the account lock after failed login attempt. These lines will be implemented separately. 
 ```
-auth    required       pam_faillock.so preauth silent audit deny=3 unlock_time=300
-auth    [default=die]  pam_faillock.so authfail audit deny=3 unlock_time=300
-account     required      pam_faillock.so
+auth        required       pam_faillock.so preauth silent audit deny=3 unlock_time=300
+auth        [default=die]  pam_faillock.so authfail audit deny=3 unlock_time=300
+account     required       pam_faillock.so
 ```
 #### Explanation 
 - `audit` enables user auditing 
@@ -77,10 +77,10 @@ $ vi /etc/pam.d/password-auth
 # This file is auto-generated.
 # User changes will be destroyed the next time authconfig is run.
 auth        required      pam_env.so
-**auth        required      pam_faillock.so preauth silent audit deny=3 unlock_time=300**
+**auth        required      pam_faillock.so preauth silent audit deny=3 even_deny_root unlock_time=300**
 auth        sufficient    pam_fprintd.so
 auth        sufficient    pam_unix.so nullok try_first_pass
-auth        [default=die]  pam_faillock.so  authfail  audit  deny=3  unlock_time=300
+**auth        [default=die]  pam_faillock.so  authfail  audit  deny=3 even_deny_root unlock_time=300**
 auth        requisite     pam_succeed_if.so uid >= 1000 quiet
 auth        required      pam_deny.so
 
@@ -88,8 +88,20 @@ account     required      pam_unix.so
 account     sufficient    pam_localuser.so
 account     sufficient    pam_succeed_if.so uid < 500 quiet
 account     required      pam_permit.so
-account     required      pam_faillock.so
+**account     required      pam_faillock.so**
 ```
+stars-coded lines are what you need to add into the existing modules. You can either use with or without `even_deny_root` which will deny the root login after 3 failed login attempt. 
+```
+auth        required      pam_faillock.so preauth silent audit deny=3 unlock_time=300
+auth        required      pam_faillock.so preauth silent audit deny=3 even_deny_root unlock_time=300
+```
+
+To activate the configuration 
+```
+# systemctl restart sshd  [On SystemD]
+# service sshd restart    [On SysVInit]
+```
+
 ### Check the ssh connection and kill it by PID
 
 ```
