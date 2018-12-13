@@ -52,6 +52,44 @@ You need to protect your server from multiple attacks. Even if you setup the ssh
 - This is from DigitalOcean how to <a href=https://www.linode.com/docs/security/securing-your-server/>Setup</a>.  
 - This is my detailed <a href=https://github.com/kckenneth/Hardening/blob/master/README.md>Setup</a>.  
 
+### Lock user account after failed login attempt
+
+You need to change the Linux PAM (Pluggable Authentication Module)
+
+The following 3 lines are required to implement the account lock after failed login attempt. These lines will be implemented separately. 
+```
+auth    required       pam_faillock.so preauth silent audit deny=3 unlock_time=300
+auth    [default=die]  pam_faillock.so authfail audit deny=3 unlock_time=300
+account     required      pam_faillock.so
+```
+#### Explanation 
+- `audit` enables user auditing 
+- `deny=3` is after 3 failed login attempt 
+- `unlock_time=300` 5 minutes will be locked after 3 failed login attempt 
+
+Go to the following two files. But you'll be implementing in `system-auth` first. Then repeat the process in `password-auth` as well. 
+```
+$ vi /etc/pam.d/system-auth
+$ vi /etc/pam.d/password-auth 
+```
+
+```#%PAM-1.0
+# This file is auto-generated.
+# User changes will be destroyed the next time authconfig is run.
+auth        required      pam_env.so
+**auth        required      pam_faillock.so preauth silent audit deny=3 unlock_time=300**
+auth        sufficient    pam_fprintd.so
+auth        sufficient    pam_unix.so nullok try_first_pass
+auth        [default=die]  pam_faillock.so  authfail  audit  deny=3  unlock_time=300
+auth        requisite     pam_succeed_if.so uid >= 1000 quiet
+auth        required      pam_deny.so
+
+account     required      pam_unix.so
+account     sufficient    pam_localuser.so
+account     sufficient    pam_succeed_if.so uid < 500 quiet
+account     required      pam_permit.so
+account     required      pam_faillock.so
+```
 ### Check the ssh connection and kill it by PID
 
 ```
