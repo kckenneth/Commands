@@ -102,6 +102,19 @@ To activate the configuration
 # service sshd restart    [On SysVInit]
 ```
 
+#### To check the failed login attempt
+```
+# faillock --user root
+
+root:
+When                Type  Source                                           Valid
+2018-12-12 22:37:21 RHOST 218.92.1.151                                         V
+2018-12-12 22:32:17 RHOST 218.92.1.151                                         I
+2018-12-12 22:32:19 RHOST 218.92.1.151                                         I
+2018-12-12 22:37:23 RHOST 218.92.1.151                                         V
+2018-12-12 22:38:03 RHOST 218.92.1.151                                         V
+```
+
 ### Check the ssh connection and kill it by PID
 
 ```
