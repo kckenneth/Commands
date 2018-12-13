@@ -77,10 +77,10 @@ $ vi /etc/pam.d/password-auth
 # This file is auto-generated.
 # User changes will be destroyed the next time authconfig is run.
 auth        required      pam_env.so
-**auth        required      pam_faillock.so preauth silent audit deny=3 even_deny_root unlock_time=300**
+**auth        required      pam_faillock.so preauth silent audit deny=3 unlock_time=300**
 auth        sufficient    pam_fprintd.so
 auth        sufficient    pam_unix.so nullok try_first_pass
-**auth        [default=die]  pam_faillock.so  authfail  audit  deny=3 even_deny_root unlock_time=300**
+**auth        [default=die]  pam_faillock.so  authfail  audit  deny=3 unlock_time=300**
 auth        requisite     pam_succeed_if.so uid >= 1000 quiet
 auth        required      pam_deny.so
 
@@ -95,6 +95,7 @@ stars-coded lines are what you need to add into the existing modules. You can ei
 auth        required      pam_faillock.so preauth silent audit deny=3 unlock_time=300
 auth        required      pam_faillock.so preauth silent audit deny=3 even_deny_root unlock_time=300
 ```
+However when I tried `even_deny_root`, it completes block ssh root login even with the correct password. So I avoid using that. 
 
 To activate the configuration 
 ```
