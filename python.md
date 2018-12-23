@@ -28,3 +28,7 @@ pip install nump -U
 pip install --ignore-installed ${PACKAGE_NAME}
 pip install --ignore-installed six
 ```
+# Install fastai==0.7.0
+```
+!pip3 install fastai==0.7.0      # in jupyter notebook
+```
