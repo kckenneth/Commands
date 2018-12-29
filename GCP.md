@@ -14,10 +14,10 @@ datalab create <MyVM> --zone <ZONE>
 `<ZONE>` = your regional zone, you can list the available zone by `gcloud compute zones list`. 
 
 
-# Create a storage bucket
+# Create a storage bucket (<a href=https://cloud.google.com/storage/docs/quickstart-gsutil>details</a>)
 
 ```
-REGION=us-central1
+REGION=us-east1
 BUCKET=$(gcloud config get-value project)
 TFVERSION=1.7
 
