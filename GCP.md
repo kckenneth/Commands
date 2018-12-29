@@ -9,7 +9,7 @@ Datalab is a shortcut to creating a new VM with a default specifications on the 
 ```
 datalab create <MyVM> --zone <ZONE>
 ```
-<MyVM> = your choice 
+<MyVM> = your choice  
 <ZONE> = your regional zone, you can list the available zone by `gcloud compute zones list`. 
 
 
