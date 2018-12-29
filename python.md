@@ -1,3 +1,16 @@
+# Check which python and their path
+
+```
+which -a python python3
+
+/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+/Library/Frameworks/Python.framework/Versions/3.6/bin/python
+```
+
+```
+type -a python            # does the same thing
+```
+
 # Install by PIP (Preferred Installer Packages) 
 
 ```
