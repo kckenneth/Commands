@@ -15,6 +15,18 @@ CentOS
 /lib/systemd/systemd: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32, BuildID[sha1]=74584540f9e94865453495ad93b2954e7b07f5c6, stripped
 ```
 
+### Update
+
+Ubuntu 
+```
+# sudo apt-get update
+```
+
+CentOS 
+```
+# sudo yum install -y epel-release
+```
+
 ### SSH key 
 
 More <a href=https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys>Details.</a>  
