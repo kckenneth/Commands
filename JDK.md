@@ -1,5 +1,7 @@
 ## Java conflict
 
+<a href="https://stackoverflow.com/questions/14292698/how-do-i-check-if-the-java-jdk-is-installed-on-mac">Source</a> 
+
 If you have a Java conflict running pyspark with an error 
 ```
 UnsupportedClassVersionError 55
