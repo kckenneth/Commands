@@ -23,3 +23,15 @@ TFVERSION=1.7
 
 gsutil mb -l ${REGION} gs://${BUCKET}
 ```
+
+# To transfer files from Compute Engine (GCP) 
+
+- Need to establish ssh (private and public keys) in metada in console.cloud.google. Go to <a href="https://github.com/kckenneth/GCPsetup">GCP Setup</a> 
+
+```
+scp -i ~/.ssh/w266 kchen@xx.xx.xx.xx:/home/kchen/tf/TensorFlow-Tutorials/data/coco/transfer_values_val.pkl .
+```
+If you're using `gcloud compute` 
+```
+gcloud compute scp --recurse ./* kchen@xx.xx.xx.xxx:/home/kchen/tf/TensorFlow-Tutorials/data/coco/
+```
