@@ -35,3 +35,7 @@ If you're using `gcloud compute`
 ```
 gcloud compute scp --recurse ./* kchen@xx.xx.xx.xxx:/home/kchen/tf/TensorFlow-Tutorials/data/coco/
 ```
+
+# To shut down the project 
+
+IAM & Admin --> Setting --> Select projects and shut down 
