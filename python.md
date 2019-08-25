@@ -45,3 +45,16 @@ pip install --ignore-installed six
 ```
 !pip3 install fastai==0.7.0      # in jupyter notebook
 ```
+
+# Keras
+```
+pip uninstall keras
+pip install -I keras==2.2.0
+```
+
+Note
+Need to downgrade keras from 2.2.4 to 2.2.0 when I got the error while training RCNN
+```
+ValueError: Shape must be rank 1 but is rank 0 for 'bn_conv1/Reshape_4' (op: 'Reshape') with input shapes: [1,1,1,64], [].
+```
+
