@@ -57,4 +57,19 @@ Need to downgrade keras from 2.2.4 to 2.2.0 when I got the error while training 
 ```
 ValueError: Shape must be rank 1 but is rank 0 for 'bn_conv1/Reshape_4' (op: 'Reshape') with input shapes: [1,1,1,64], [].
 ```
+# Run the python program in the background
+```
+nohup python app.py &
+```
+<a href="https://github.com/kckenneth/Elasticsearch">source</a>
+
+To stop the program, first check which `PID` the program is assigned to. 
+```
+top
+```
+note down the `PID` number, if the `PID` is 4046
+```
+kill -9 4046
+```
+
 
