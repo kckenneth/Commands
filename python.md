@@ -71,5 +71,9 @@ note down the `PID` number, if the `PID` is 4046
 ```
 kill -9 4046
 ```
+If you can't find from the `top` command, you can also do so by
+```
+netstat -tnlp
+```
 
 
