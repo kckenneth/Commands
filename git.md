@@ -57,4 +57,13 @@ git push origin development       # development branch only
 git push origin --all              # push all branches to origin repo
 ```
 
+### revert to the last commit stage
+```
+git log                           # to get the last commit id, copy the id
+git branch -D development         # to delete the branch that you don't want
+git push origin :development      # to push to the remote `origin` to make changes as here in local branch
+git reset --hard <commit id>      # paste the commit id 
+git push --force                  # making changes at remote repo
+```
+
 
