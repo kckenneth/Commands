@@ -43,3 +43,18 @@ $ git merge topic #Merge new branch "topic"
 $ git branch -d topic #Delete new branch "topic"
 ```
 
+### to know which remote repository you have in the directory
+```
+git remote -v
+
+origin	https://github.com/kckenneth/GATECH.git (fetch)
+origin	https://github.com/kckenneth/GATECH.git (push)
+```
+
+### to push the branch to remote repository
+```
+git push origin development       # development branch only
+git push origin -all              # push all branches to origin repo
+```
+```
+
