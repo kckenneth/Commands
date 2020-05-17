@@ -34,4 +34,12 @@ git checkout development
 git checkout master
 ```
 
+### example of creating the branch and merging
+```
+$ git checkout -b topic #Create and checkout new branch
+$ git commit -a -m "New Features" #Commit all the changes
+$ git checkout master #Checkout to Master
+$ git merge topic #Merge new branch "topic"
+$ git branch -d topic #Delete new branch "topic"
+```
 
