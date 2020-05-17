@@ -83,6 +83,7 @@ git status                        # check which branch you're on
 ```
 git tag                           # list all the available tag
 git tag v1                        # create a new tag "v1" version 1
+git push origin --tags            # push all tags to remote repo, by default tags are not pushed
 ```
 
 
