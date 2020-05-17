@@ -86,4 +86,20 @@ git tag v1                        # create a new tag "v1" version 1
 git push origin --tags            # push all tags to remote repo, by default tags are not pushed
 ```
 
+### Git merge conflict
+Typically when there's a conflict in the file., i.e., the same file modified by either different users or the same user in different branches try to merge into the master, `merge conflict` occur. 
+```
+<<<<< HEAD
+
+=======
+
+>>>>> new branch 
+````
+the content above the divider `======` is the content in current branch. If you're in master branch, the content belongs to the file in the master branch. The content below the divider is the content modified in the same file from different user or another branch. To resolve the conflict, you'd remove `<<<<<< HEAD`, `=======`, `>>>>>> new branch`, 3 merge conflicts indicators. You can either keep the original content above the divider, or keep the new content below the divider or, remove both and completely add a new content here. As long as you remove those `3` merge conflict indicators, you resolve the conflict. Then add the fixed file, and commit. 
+```
+git add myfile.txt
+git commit -m "fixed merge conflicts"
+```
+
+
 
