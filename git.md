@@ -17,6 +17,8 @@ git status            # checking the git status, you'd see you're on master bran
 Or you can also clone the git repository locally. 
 ```
 git clone https://github.com/kckenneth/Commands.git
+<OR>
+git clone https://github.com/kckenneth/Commands.git myCommands     # change the directory name to `myCommands`
 ```
 
 ### to create a file 
