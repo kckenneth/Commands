@@ -54,7 +54,7 @@ origin	https://github.com/kckenneth/GATECH.git (push)
 ### to push the branch to remote repository
 ```
 git push origin development       # development branch only
-git push origin -all              # push all branches to origin repo
+git push origin --all              # push all branches to origin repo
 ```
-```
+
 
