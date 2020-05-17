@@ -1,3 +1,9 @@
+3 critical steps in version control in git
+
+1. git add <file name>
+2. git commit -m <"message">
+3. git push origin --all
+  
 ### To clone the repository from the github 
 ```
 git clone https://github.com/kckenneth/Commands.git
@@ -70,6 +76,13 @@ git push --force                  # making changes at remote repo
 ```
 git branch -a                     # check how many branches
 git status                        # check which branch you're on
+```
+
+### git tagging 
+<a href=https://git-scm.com/book/en/v2/Git-Basics-Tagging>source</a>
+```
+git tag                           # list all the available tag
+git tag v1                        # create a new tag "v1" version 1
 ```
 
 
