@@ -3,8 +3,18 @@
 1. git add <file name>
 2. git commit -m <"message">
 3. git push origin --all
-  
+ 
+### to make a local git repository
+If you're doing your project locally and want to control version, you can do by installing git. After your local computer has git installed, you can make any directory as git repository. 
+```
+mkdir myproject       # creating myproject directory
+cd myproject
+git init              # initialize the git in `myproject` directory
+git status            # checking the git status, you'd see you're on master branch
+```
+
 ### To clone the repository from the github 
+Or you can also clone the git repository locally. 
 ```
 git clone https://github.com/kckenneth/Commands.git
 ```
