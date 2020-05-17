@@ -32,6 +32,13 @@ nano test.txt
 git commit -m "added test file"
 ```
 
+### check the difference
+After you make the commit, and you make another modification on the file, you can check the difference between the committed file and a new file. A new file has not been committed yet. 
+```
+git status           # will tell you if there's any uncommitted file
+git diff test.txt    # check the difference between the previously committed file and a newly modified file
+```
+
 ### to create a branch "development" and checkout to the branch "development"
 ```
 # to create the branch first
