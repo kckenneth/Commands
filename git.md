@@ -53,7 +53,7 @@ origin	https://github.com/kckenneth/GATECH.git (push)
 
 ### to push the branch to remote repository
 ```
-git push origin development       # development branch only
+git push origin development        # development branch only
 git push origin --all              # push all branches to origin repo
 ```
 
@@ -64,6 +64,12 @@ git branch -D development         # to delete the branch that you don't want
 git push origin :development      # to push to the remote `origin` to make changes as here in local branch
 git reset --hard <commit id>      # paste the commit id 
 git push --force                  # making changes at remote repo
+```
+
+### Check how many branches
+```
+git branch -a                     # check how many branches
+git status                        # check which branch you're on
 ```
 
 
