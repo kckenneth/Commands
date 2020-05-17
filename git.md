@@ -86,6 +86,10 @@ git tag v1                        # create a new tag "v1" version 1
 git push origin --tags            # push all tags to remote repo, by default tags are not pushed
 ```
 
+### git fetch, git merge, git pull
+`git fetch` + `git merge` = `git pull` 
+If you don't have any conflict, you can do `git pull` to accomplish two jobs. But even if there's a conflict, `git pull` will notify you the merge conflict and you need to resolve the issue. 
+
 ### Git merge conflict
 Typically when there's a conflict in the file., i.e., the same file modified by either different users or the same user in different branches try to merge into the master, `merge conflict` occur. 
 ```
