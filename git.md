@@ -18,7 +18,20 @@ git commit -m "added test file"
 
 ### to create a branch "development" and checkout to the branch "development"
 ```
+# to create the branch first
+git branch development 
+git checkout development
+
+# to create and immediately checkout to the branch
 git checkout -b development
-git checkout development  # if the branch already exists
+
+# if the branch already exists
+git checkout development  
 ```
+
+### to checkout to master
+```
+git checkout master
+```
+
 
