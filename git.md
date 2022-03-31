@@ -21,6 +21,14 @@ git clone https://github.com/kckenneth/Commands.git
 git clone https://github.com/kckenneth/Commands.git myCommands     # change the directory name to `myCommands`
 ```
 
+### Fetch any updates from the git repo
+ 
+```
+git pull             # will pull master branch
+git pull -all        # will pull all branches
+git pull myBranch    # will pull myBranch
+```
+ 
 ### to create a file 
 ```
 cd Commands
