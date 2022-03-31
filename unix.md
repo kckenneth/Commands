@@ -50,5 +50,74 @@ grep -n -3 "// ====== sports " us_web.jabba
 1281-
 ```
 
+### Insert text at a specific line number 
+
+Once you know the line number where you want to insert the text, you can use `ed` text editor. `ed` is interactive, which means once you call the `ed` command, it's interactive and update the file. 
+
+```
+ed myFile.txt
+32
+```
+
+The first command `ed myFile.txt` will return `32` which indicates the number of character inside `myFile.txt`. You're now in interactive mode. If you want to quit, use 
+```
+.
+w
+q
+```
+
+In each typing, 
+`.`, hit Enter. 
+`w`, hit Enter. 
+`q`, hit Enter. 
+
+If `myFile.txt` has contents
+```
+cat myFile.txt
+I
+am
+Ken
+```
+
+You want to add new line at line number `2`, use `2i` to indicate the line number `2` and `i` for insertion. 
+```
+ed myFile.txt
+32
+2i                    # hit Enter
+This is new line      # type "This is new line" and hit Enter
+.                     # type "." and hit Enter
+w                     # type "w" and hit Enter
+q                     # type "q" and hit Enter
+```
+
+`myFile.txt` will be updated with a new line. 
+```
+cat myFile.txt
+I
+This is new line
+am
+Ken
+```
+
+If you want to add a paragraph, make a file, eg, `toAdd.txt`
+
+```
+2i
+This is a new line
+Will take up space
+Hope it can fit
+.
+w
+q
+```
+
+Execute as before
+
+```
+ed myFile.txt < toAdd.txt
+```
+
+
+Ref: https://www.baeldung.com/linux/insert-line-specific-line-number
 
 
