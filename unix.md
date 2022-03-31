@@ -34,6 +34,21 @@ vi myFile.txt
 awk "NR >= 1280 && NR <= 1295" myFile.txt
 ```
 
+### Find the line number for the text of interest
+Sometimes the above approach doesn't give you the line number, you need to `grep`. First you need to know the text you're looking for. You might also want to know `+/-` number of lines above and below the text of interest. 
+
+`grep -n -3 "string to search" largeFile.txt`
+
+```
+grep -n -3 "// ====== sports " us_web.jabba 
+1275-	@__movie_reference `task="query_reference";rule_id="movie_reference"`
+1276-];
+1277-
+1278:// ====== sports ======
+1279-
+1280-// Natural language patterns for sports domain
+1281-
+```
 
 
 
