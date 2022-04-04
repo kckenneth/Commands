@@ -132,5 +132,38 @@ git add myfile.txt
 git commit -m "fixed merge conflicts"
 ```
 
+## Working on a repo from web and updating locally
+ 
+### 1. Find the git repo that you want to work on. Git clone locally. 
+```
+git clone https://github.com/kckenneth/Commands.git
+``` 
+
+### 2. Work on `git.md`, i.e, update some commands. 
+```
+cd Commands
+git checkout -b myBranch                       # checking out to a new branch `myBranch`
+vi git.md                                      # add some text 
+git add git.md
+git commit -m "added more git commands"
+git push origin myBranch                       # pushing the branch to remote repo 
+```
+ 
+### 3. Remote origin (online git repo)
+1. You'd see there's a commit in the online git repo. You need to click drop down menu to see the branch `myBranch`.  
+2. Submit `pull request` on your `myBranch` with at least one reviewer selection on the right side.  
+3. If the request is approved, you can merge the branch to master branch.  
+4. Delete the branch after merging.  
+
+### 4. Update locally 
+```
+git checkout master 
+git pull -p                    # update from origin and prune all branches, i.e., deleted branch will be deleted locally 
+git branch -d myBranch         # delete local myBranch 
+```
+ 
+
+
+
 
 
