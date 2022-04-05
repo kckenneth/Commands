@@ -29,5 +29,14 @@ xx.xxx.xxx.xxx  <hostname>  <nickname>
 
 ```
 netstat -tnlp
+
+[root@577e724c1a35 data]# netstat -tnlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:18000           0.0.0.0:*               LISTEN      5076/ydisc          
+tcp        0      0 0.0.0.0:4080            0.0.0.0:*               LISTEN      4168/traffic_manage 
+tcp        0      0 0.0.0.0:18001           0.0.0.0:*               LISTEN      5076/ydisc          
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      4168/traffic_manage 
+tcp        0      0 0.0.0.0:6789            0.0.0.0:*               LISTEN      5076/ydisc   
 ```
 If you want to kill the process, use this `kill -9 <PID>`
