@@ -24,3 +24,10 @@ xx.xxx.xxx.xxx  <hostname>  <nickname>
 ```
 
 `esc` --> `:wq!`
+
+### To check which port the server is currently running 
+
+```
+netstat -tnlp
+```
+If you want to kill the process, use this `kill -9 <PID>`
