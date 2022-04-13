@@ -25,6 +25,11 @@ xx.xxx.xxx.xxx  <hostname>  <nickname>
 
 `esc` --> `:wq!`
 
+You can then 
+```
+ssh <nickname>
+```
+
 ### To check which port the server is currently running 
 
 ```
@@ -40,3 +45,12 @@ tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      
 tcp        0      0 0.0.0.0:6789            0.0.0.0:*               LISTEN      5076/ydisc   
 ```
 If you want to kill the process, use this `kill -9 <PID>`
+
+### .ssh/config 
+
+Instead of setting up at the `/etc/hosts`, you can also set up in `~/.ssh/config` 
+
+```
+Host <nickname>
+ HostName <hostname>
+```
