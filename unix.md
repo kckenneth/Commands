@@ -134,7 +134,7 @@ alias ll="ls -alh"
 ```
 This will automatically add the command ```ls -alh``` in alias and can be called as `ll`. So instead of typing the entire ```ls -alh```, we can now just type ```ll```. 
 
-To remove alias, just ```unaliase ll```, it will remove the `ll` alias. 
+To remove alias, just ```unalias ll```, it will remove the `ll` alias. 
 
 
 Of course, we might have a multiple list of aliases. In that case, just add those alias list in certain files. You can then activate. Example, you can add the list of aliases in `~/.bashrc`. However, you need to `source ~/.bashrc` everytime you create a shell. Linux source `~/.profile` everytime a new shell is created. So you can add the command such as if the file `~/.bashrc` exists, source it. If `~/.profile` file doesn't exist, create one. `.` is the same as `source`. 
