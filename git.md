@@ -162,7 +162,13 @@ git pull -p                    # update from origin and prune all branches, i.e.
 git branch -d myBranch         # delete local myBranch 
 ```
  
-
+### 5. Delete remote branch 
+```
+git checkout -b myBranch 
+git push origin myBranch              # pushing a local branch to remote origin
+git push origin --delete myBranch     # delete myBranch in remote git repo 
+git branch -d myBranch                # delete myBranch locally 
+```
 
 
 
