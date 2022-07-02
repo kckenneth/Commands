@@ -170,6 +170,14 @@ git push origin --delete myBranch     # delete myBranch in remote git repo
 git branch -d myBranch                # delete myBranch locally 
 ```
 
-
+## Checking commit history 
+ 
+ Sometimes you want to know a specific strong or line added or removed in a specific file. 
+ 
+ ```
+ git log -p -S "movie_watch_online_4" us_web.jabba
+ ```
+ 
+ 
 
 
