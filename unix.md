@@ -146,4 +146,13 @@ if [ -f ~/.bashrc ]; then
 fi 
 ```
 
+## Change file name sequentially from a certain number 
 
+existing file names: `my001.jpg`, `my002.jpg`, etc to `my111.jpg`, `my112.jpg` etc 
+
+```
+n=111;
+for file in *.jpg ; do mv  "${file}" basename"${n}".jpg; n=$((n+1));  done
+
+for f in *.jpg; do mv "$f" my${n}.jpg; n=$((n+1)); done
+```
