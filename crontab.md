@@ -24,7 +24,7 @@ Enter the following
 Click "esc" to exit the insert mode.
 Type `:wq` to `write and quit` the file. 
 
-What it does it, every day during the weekday `1-5` at 5 o'clock `0 17`, it will run change to the directory and run the python program from the path indicated. 
+What it does is, every day during the weekday `1-5` at 5 o'clock `0 17`, it will run change to the directory and run the python program from the path indicated. 
 
 A few explanations that I found useful. 
 
