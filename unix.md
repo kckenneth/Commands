@@ -156,3 +156,28 @@ for file in *.jpg ; do mv  "${file}" basename"${n}".jpg; n=$((n+1));  done
 
 for f in *.jpg; do mv "$f" my${n}.jpg; n=$((n+1)); done
 ```
+
+## Sort file content based on column 
+
+file.txt contains two values separated by tab
+```
+apple   1
+orange  5
+strawberry  10
+print text  50
+```
+
+-nr : numerical reverse 
+-k : column 
+```
+sort -nr -k2 -t $'\t' file.txt > file_sorted
+```
+
+```
+cat file_sorted
+print text  50
+strawberry  10
+orange  5
+apple   1
+```
+
