@@ -181,3 +181,10 @@ orange  5
 apple   1
 ```
 
+## add up values on column
+
+```
+awk -F'\t' '{s+=$2}END{print s}' file.txt
+66
+```
+
