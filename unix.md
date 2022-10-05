@@ -204,6 +204,7 @@ print text  50
 
 ```
 awk -F'\t' '$2 >= 10 {print $1 $2}' file.txt 
+
 strawberry  10
 print text  50
 ```
