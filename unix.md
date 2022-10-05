@@ -188,3 +188,24 @@ awk -F'\t' '{s+=$2}END{print s}' file.txt
 66
 ```
 
+## display nth line 
+
+https://www.theunixschool.com/2012/12/how-to-print-every-nth-line-in-file-in.html 
+
+showing every 2nd line 
+```
+awk '!(NR%2)' file.txt 
+
+orange  5
+print text  50
+```
+
+## check the value 
+
+```
+awk -F'\t' '$2 >= 10 {print $1 $2}' file.txt 
+strawberry  10
+print text  50
+```
+
+
