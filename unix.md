@@ -209,4 +209,35 @@ strawberry  10
 print text  50
 ```
 
+## Remove fileB content from fileA 
+
+fileA
+```
+how to join sql 
+why sql statement
+how to parse values
+apple
+eat orange 
+```
+
+fileB 
+```
+join sql
+to parse
+```
+
+```
+fgrep -vf fileB fileA
+
+why sql statement
+apple 
+orange
+```
+
+If want to remove exact match, use `-x`
+
+```
+fgrep -xvf fileB fileA
+```
+
 
