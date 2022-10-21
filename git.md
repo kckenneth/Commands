@@ -138,6 +138,11 @@ git commit -m "fixed merge conflicts"
 ```
 git clone https://github.com/kckenneth/Commands.git
 ``` 
+ 
+If cloning the branch 
+```
+git clone -b myBranch https://github.com/kckenneth/Commands.git
+```
 
 ### 2. Work on `git.md`, i.e, update some commands. 
 ```
