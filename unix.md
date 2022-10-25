@@ -240,4 +240,36 @@ If want to remove exact match, use `-x`
 fgrep -xvf fileB fileA
 ```
 
+## add new column by awk 
+
+```
+cat test.txt 
+orange 
+
+awk -F'\t' OFS='\t' '{print $0,"","apple","s"}' test.txt 
+orange  apple s 
+```
+
+## replace character with another character by sed 
+
+streaming editor, a character to be replaced bounded by two forward slashes `//`
+
+```
+cat test.txt
+apple),toOrange(0)(),
+
+cat test.txt | sed -e 's/)/-/g'
+apple-,toOrange(0-(-,
+
+cat test.txt | sed -e 's/)/-/' 
+apple-,toOrange(0)(),
+
+cat test.txt | sed -e 's/)/\//g'
+apple/,toOrange(0/(/,
+
+cat test.txt | sed -e 's/)/\//' 
+apple/,toOrange(0)(),
+```
+
+
 
