@@ -56,6 +56,16 @@ vi largeFile.txt
 :set number
 ```
 
+### Find file containing string 
+
+```
+grep -nrw "driving"
+```
+
+-n : line number 
+-r : recursive
+-w : match whole world, eg driving
+
 ### Insert text at a specific line number 
 
 Once you know the line number where you want to insert the text, you can use `ed` text editor. `ed` is interactive, which means once you call the `ed` command, it's interactive and update the file. 
