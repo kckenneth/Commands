@@ -167,6 +167,14 @@ for file in *.jpg ; do mv  "${file}" basename"${n}".jpg; n=$((n+1));  done
 for f in *.jpg; do mv "$f" my${n}.jpg; n=$((n+1)); done
 ```
 
+## Change file name from a string to another 
+
+foo-bar-file.txt --> fool-file.txt 
+
+```
+for file in *.txt; do mv $file ${file//-bar/}; done
+```
+
 ## Sort file content based on column 
 
 file.txt contains two values separated by tab
