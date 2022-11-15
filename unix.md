@@ -260,11 +260,13 @@ fgrep -xvf fileB fileA
 
 ## add new column by awk 
 
+add `-v` for OFS. 
+
 ```
 cat test.txt 
 orange 
 
-awk -F'\t' OFS='\t' '{print $0,"","apple","s"}' test.txt 
+awk -F'\t' -v OFS='\t' '{print $0,"","apple","s"}' test.txt 
 orange  apple s 
 ```
 
