@@ -258,6 +258,30 @@ If want to remove exact match, use `-x`
 fgrep -xvf fileB fileA
 ```
 
+## Extract common content/same string between fileA and fileB 
+
+```
+fileA 
+apple 
+orange
+sort dictionary
+nectar mattresses
+
+fileB 
+orange
+nectar
+apple
+
+fgrep -Fxf fileA fileB
+apple
+orange
+```
+
+-F : plain strings (not regex)
+-x : exact match 
+-f : check line by line 
+
+
 ## add new column by awk 
 
 add `-v` for OFS. 
