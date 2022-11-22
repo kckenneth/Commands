@@ -315,5 +315,11 @@ cat test.txt | sed -e 's/)/\//'
 apple/,toOrange(0)(),
 ```
 
+## To lower string by awk 
 
+https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash 
+
+```
+awk '{print tolower($0)}' fileA > fileA_lower
+```
 
