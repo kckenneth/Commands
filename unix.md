@@ -217,6 +217,44 @@ In `awk`,
 `$0` = `apple is a fruit.`   
 `$1` = `apple`  
 
+```
+cat test.txt 
+
+apple	fruit
+orange	fruit
+lemon	fruit
+apple	fruit
+apple	device
+samsung	device
+```
+
+Count the frequency of a string `fruit`. This is the easier way to count the unique words. 
+
+```
+awk '{print $2}' test.txt | sort | uniq -c
+
+2 device
+4 fruit
+```
+
+Using Array, this is longer, but much control on what you want. 
+
+```
+awk -F'\t' '{count[$2]++} END {for (word in count) print word, count[word]}' test.txt 
+
+fruit 4
+device 2
+```
+
+count[$2] will keep counting up the same string. This is kind of like a dictionary. If we know which `word` we're looking for, eg `fruit`, we could also execute 
+
+```
+awk -F'\t' '{count[$2]++} END {for (word in count) { if (word == "fruit") { print word, count[word]}}}' test.txt
+
+fruit 4
+```
+
+
 
 
 ## display nth line 
