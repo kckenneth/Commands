@@ -206,6 +206,19 @@ awk -F'\t' '{s+=$2}END{print s}' file.txt
 66
 ```
 
+## count the frequency of a string 
+
+In `awk`,
+
+`$0` = the entire string 
+`$1` = the first word 
+
+`apple is a fruit.`  
+`$0` = `apple is a fruit.`. 
+`$1` = `apple`  
+
+
+
 ## display nth line 
 
 https://www.theunixschool.com/2012/12/how-to-print-every-nth-line-in-file-in.html 
