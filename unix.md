@@ -214,7 +214,7 @@ In `awk`,
 `$1` = the first word 
 
 `apple is a fruit.`  
-`$0` = `apple is a fruit.`. 
+`$0` = `apple is a fruit.`   
 `$1` = `apple`  
 
 
