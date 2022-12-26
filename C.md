@@ -24,7 +24,7 @@ int calculate(int sum){
  }
  ```
  
- ## dot and `->` arrow operator 
+ ## `.` dot and `->` arrow operator 
  
  https://www.tutorialspoint.com/What-is-the-difference-between-the-dot-operator-and-in-Cplusplus  
  https://cpp.sh 
