@@ -254,8 +254,39 @@ awk -F'\t' '{count[$2]++} END {for (word in count) { if (word == "fruit") { prin
 fruit 4
 ```
 
+## Check if the column is empty 
 
+https://stackoverflow.com/questions/43790965/print-only-if-field-is-not-empty 
 
+since awk commands are formed as `condition { actions }`, and the default action is to print, this can be condensed to just `awk '$4' test.txt` 
+
+```
+cat test.txt
+1   apple   $0.2    walmart
+2   orange    $0.15  walmart
+3   strawberry  $0.2 
+4   lemon   $0.05 
+5   lychee  $0.3    new york mart
+```
+
+If checking the 4th column, if the value is empty,
+
+```
+awk -F'\t' '($4==""){print $2}' test.txt | sort
+
+lemon
+strawberry
+```
+
+If checking the 4th column, if there's a value,
+
+```
+awk -F'\t' '$4' test.txt | sort
+
+apple
+lychee
+orange
+```
 
 ## display nth line 
 
