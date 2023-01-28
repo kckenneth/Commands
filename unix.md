@@ -405,3 +405,67 @@ https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-cas
 awk '{print tolower($0)}' fileA > fileA_lower
 ```
 
+## Override place name aliases 
+
+```
+#!/bin/bash
+
+kbplace=$1
+overrideList=$2
+
+function check_place_name {
+  kb=$1
+  over=$2
+
+  declare -A overdict
+  declare -A overalias
+  declare -A checked
+
+  i=0
+  while IFS=$'\t' read -r key value attrk attrv; do
+    if [[ $key && $value ]]; then
+      overdict[$key]+=${value}$'\n'
+      overalias[$value]+=${key}$'\n'
+
+      i=$[$i+1]
+    fi
+  done < $over
+
+  echo ${i} " total number of place_name to override successfully loaded"
+
+  counter = 0
+  while IFS=$'\t' read -r term data; do
+    if [[ ! -z $data ]]; then
+      temp=$(echo $data | cut -d $'\001' -f2)
+      if [[ $temp = yk:* ]]; then
+        wiki=$(echo $temp | cut -c4-)
+      else
+        wiki=$temp
+      fi
+
+      if [[ -z ${overalias[$term]} ]]; then
+        echo -e "${term}\t${data}" >> yk.place_name_kept
+        counter=$[$counter+1]
+      fi
+
+      if [[ ! -z $wiki ]]; then
+        if [[ ${overdict[$wiki]} ]]; then
+          echo "wiki:" $wiki
+
+          #first time referent checking and creating entity with a list of aliases
+          if [[ -z ${checked[$wiki]} ]]; then
+            while IFS=$'\n' read -r line; do
+              if [[ $line ]]; then
+                echo -e "${line}\t${data}" >> yk.place_name_override
+              fi
+            done < <(echo "${overdict[$wiki]}")
+            checked+=([$wiki]=1)
+          fi
+        fi
+      fi
+    fi
+  done < $kb
+}
+
+check_place_name kbplace $overrideList
+```
