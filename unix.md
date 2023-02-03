@@ -300,6 +300,15 @@ orange  5
 print text  50
 ```
 
+## print the nth line 
+
+https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
+
+printing 10th line
+```
+sed '10q;d' file.txt
+```
+
 ## check the value 
 
 ```
