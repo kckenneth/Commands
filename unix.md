@@ -254,6 +254,15 @@ awk -F'\t' '{count[$2]++} END {for (word in count) { if (word == "fruit") { prin
 fruit 4
 ```
 
+## Count on condition 
+
+```
+cat test.tsv |awk -F'\t' '$4=="tv_intent"{cnt[$6]++} END{for(i in cnt) print i"\t"cnt[i]}'|sort -t$'\t' -k2 -nr
+
+common	144
+general	49...
+```
+
 ## Check if the column is empty 
 
 https://stackoverflow.com/questions/43790965/print-only-if-field-is-not-empty 
