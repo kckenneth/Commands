@@ -423,6 +423,16 @@ https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-cas
 awk '{print tolower($0)}' fileA > fileA_lower
 ```
 
+
+## To delete files except one file 
+
+https://unix.stackexchange.com/questions/153862/remove-all-files-directories-except-for-one-file 
+
+```
+$ shopt -s extglob 
+$ rm -- !(file.txt)
+```
+
 ## Override place name aliases 
 
 ```
