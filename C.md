@@ -39,7 +39,7 @@ int calculate(int sum){
  When iterating the vector, it's used as !=xxx.end(), it's because of the pointer references. 
  
  ```
- for (std::vector<int>::iterator it = data.beging(); it != data.end(); ++it) { }
+ for (std::vector<int>::iterator it = data.begin(); it != data.end(); ++it) { }
  ```
  
  ```
