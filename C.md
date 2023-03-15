@@ -55,3 +55,22 @@ int calculate(int sum){
  
  When the iterator reaches the end, it tries to read the right side of its position, which is beyond the vector `[A,B,C,D]`. Therefore, in for loop, it usually indicates that the iterator shouldn't end at the actual end point. 
  
+## address variable, address of, content of address 
+
+https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers
+
+```
+int x = 5;
+int *pointer = &x;
+cout<<pointer        # hexadecimal value 
+cout<<*pointer       # content of the address
+```
+
+Mnemonic, whenever you see the type `int`, `string`, etc followed by the asterisk `*`, that means the variable is the memory address. 
+
+So the variable `pointer` is the memory address. What is its value? Its value is the address of the variable `x`. So address is an ampersand `&`. So the variable `pointer` has the memory address value of the another variable `x`. 
+
+So when printing the variable `pointer`, it's printing the memory address in hexademical value. 
+But if we add `*` in front of the variable `pointer`, it's now printing the content of the memory address. It might be confusing what the asterisk `*` represents whether it represents the address variable or the content of address. Whenever you see the type `int`, `string` in front of the `*`, it means the variable is the memory address. All other are using the content of that memory address. 
+
+
