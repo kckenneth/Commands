@@ -74,6 +74,29 @@ So the variable `pointer` is the memory address. What is its value? Its value is
 So when printing the variable `pointer`, it's printing the memory address in hexademical value. 
 But if we add `*` in front of the variable `pointer`, it's now printing the content of the memory address. It might be confusing what the asterisk `*` represents whether it represents the address variable or the content of address. Whenever you see the type `int`, `string` in front of the `*`, it means the variable is the memory address. All other are using the content of that memory address. 
 
+### Note 
+
+```
+using namespace std;
+int main()
+{
+    vector<int> ar = { 1, 2, 3, 4, 5 };
+      
+    // Declaring iterator to a vector
+    vector<int>::iterator ptr;
+      
+    // Displaying vector elements using begin() and end()
+    cout << "The vector elements are : ";
+    for (ptr = ar.begin(); ptr < ar.end(); ptr++)
+        cout << *ptr << " ";
+      
+    return 0;  
+```
+
+The other pointer that also points to the memmory address is `vector<int>::iterator ptr`
+
+In this case, the variable `ptr` points to the memory address of an array. When we want to call the value from that memory address, we use `*ptr`.
+
 -----------
 https://programsquared.com/cpp/difference-between-ampersand-and-asterisk-operator-c++/
 
