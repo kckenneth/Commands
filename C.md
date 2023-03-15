@@ -57,13 +57,14 @@ int calculate(int sum){
  
 ## address variable, address of, content of address 
 
-https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers
+https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers 
+https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga
 
 ```
 int x = 5;
 int *pointer = &x;
 cout<<pointer        # hexadecimal value 
-cout<<*pointer       # content of the address
+cout<<*pointer       # content of the address 
 ```
 
 Mnemonic, whenever you see the type `int`, `string`, etc followed by the asterisk `*`, that means the variable is the memory address. 
@@ -73,4 +74,23 @@ So the variable `pointer` is the memory address. What is its value? Its value is
 So when printing the variable `pointer`, it's printing the memory address in hexademical value. 
 But if we add `*` in front of the variable `pointer`, it's now printing the content of the memory address. It might be confusing what the asterisk `*` represents whether it represents the address variable or the content of address. Whenever you see the type `int`, `string` in front of the `*`, it means the variable is the memory address. All other are using the content of that memory address. 
 
+-----------
+https://programsquared.com/cpp/difference-between-ampersand-and-asterisk-operator-c++/
+
+```
+include <iostream>
+
+void modifyObject(int& obj){
+    obj = 3; //Modifies the object directly
+}
+
+int main(){
+    int obj = 41;
+    modifyObject(obj);
+    std::cout << obj << std::endl; //Returns 3
+
+    return 0;
+}
+```
+In this example, the `&` is close to the type `int` and we're directly modifying the variable `obj` content. 
 
