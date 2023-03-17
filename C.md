@@ -1,3 +1,13 @@
+## Name convention 
+
+https://cplusplus.com/forum/beginner/89834/ 
+
+- typedef are followed by `_t` 
+
+```
+size_t, time_t
+```
+
 ## Callback Function
 
 If you have a function, y, as an argument to use in a function x, the function y is called "callback function".
