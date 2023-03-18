@@ -68,8 +68,8 @@ int calculate(int sum){
 ## address variable, address of, content of address 
 
 https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers  
-https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga 
-https://www.w3schools.com/cpp/cpp_pointers_modify.asp 
+https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga  
+https://www.w3schools.com/cpp/cpp_pointers_modify.asp  
 
 ```
 int x = 5;
