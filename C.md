@@ -66,6 +66,7 @@ int calculate(int sum){
  When the iterator reaches the end, it tries to read the right side of its position, which is beyond the vector `[A,B,C,D]`. Therefore, in for loop, it usually indicates that the iterator shouldn't end at the actual end point. 
  
 ## address variable, address of, content of address 
+## int *ptr, &ref, *ptr
 
 https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers  
 https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga  
@@ -84,6 +85,30 @@ So the variable `pointer` is the memory address. What is its value? Its value is
 
 So when printing the variable `pointer`, it's printing the memory address in hexademical value. 
 But if we add `*` in front of the variable `pointer`, it's now printing the content of the memory address. It might be confusing what the asterisk `*` represents whether it represents the address variable or the content of address. Whenever you see the type `int`, `string` in front of the `*`, it means the variable is the memory address. All other are using the content of that memory address. 
+
+### Address of &ref 
+
+for address of `&ref`, although if you print the `&ref`, it will print out the memory address, but when you want the actual content value, you just use the ref and no need to use the asterisk. 
+
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string food = "Pizza";
+  string &meal = food;
+  string *ptr = &meal;
+
+  cout << food << "\n";         # Pizza
+  cout << meal << "\n";         # Pizza
+  cout << &meal << "\n";        # 0x7ffe31618600
+  cout << ptr << "\n";          # 0x7ffe31618600
+  cout << *ptr << "\n";         # Pizza
+  cout << &ptr << "\n";         # 0x7ffe316185f8
+  return 0;
+}
+```
 
 ### Note 
 
