@@ -136,6 +136,12 @@ ed myFile.txt < toAdd.txt
 
 Ref: https://www.baeldung.com/linux/insert-line-specific-line-number
 
+## Delete line in a range 
+
+```
+sed '1,5d' myFile.txt
+```
+
 ### Alias
 
 Sometimes we want to shorten our command. Example, if we want to use `ls -alh`, we can shorten in `alias`. In order to do so, just type 
