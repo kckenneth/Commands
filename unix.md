@@ -142,6 +142,17 @@ Ref: https://www.baeldung.com/linux/insert-line-specific-line-number
 sed '1,5d' myFile.txt
 ```
 
+## Print line in a range 
+
+https://stackoverflow.com/questions/83329/how-can-i-extract-a-predetermined-range-of-lines-from-a-text-file-on-unix 
+
+```
+sed -n '16224,16482 p' myFile.txt > new-file
+```
+
+Where 16224,16482 are the start line number and end line number, inclusive. This is 1-indexed. -n suppresses echoing the input as output, which you clearly don't want; the numbers indicate the range of lines to make the following command operate on; the command p prints out the relevant lines
+
+
 ### Alias
 
 Sometimes we want to shorten our command. Example, if we want to use `ls -alh`, we can shorten in `alias`. In order to do so, just type 
