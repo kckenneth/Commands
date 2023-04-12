@@ -335,6 +335,42 @@ printing 10th line
 sed '10q;d' file.txt
 ```
 
+## print all lines into a single line 
+
+```
+file.txt
+apple
+orange juice
+strawberry
+```
+
+This will print all lines into a single line, delimited by a vertical `|`
+
+```
+awk '{printf "%s|",$0}' file.txt > single.txt
+```
+
+```
+single.txt
+
+apple|orange juice|strawberry|
+```
+
+## print line number 
+
+```
+awk -v OFS='\t' '{print NR,$0}' file.txt > new.txt
+```
+
+```
+new.txt
+
+1 \t apple
+2 \t orange juice
+3 \t strawberry
+```
+
+
 ## check the value 
 
 ```
