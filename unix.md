@@ -476,6 +476,24 @@ https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-cas
 awk '{print tolower($0)}' fileA > fileA_lower
 ```
 
+## To trim string by awk 
+
+https://stackoverflow.com/questions/9175801/how-to-remove-leading-and-trailing-whitespaces 
+
+```
+cat test.txt 
+  john wick
+apple
+orange
+  lemon    juice
+
+awk '{$1=$1}1' test.txt 
+john wick
+apple
+orange
+lemon juice
+```
+
 
 ## To delete files except one file 
 
