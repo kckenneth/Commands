@@ -436,6 +436,8 @@ orange
 
 ## compare FileA and FileB and get match or non-match 
 
+https://stackoverflow.com/questions/32481877/what-are-nr-and-fnr-and-what-does-nr-fnr-imply 
+
 ```
 cat file1.txt 
 lemon	12
