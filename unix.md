@@ -434,6 +434,44 @@ orange
 -x : exact match 
 -f : check line by line 
 
+## compare FileA and FileB and get match or non-match 
+
+```
+cat file1.txt 
+lemon	12
+strawberry	30
+watermelon	15
+mango	15
+
+cat file2.txt 
+strawberry
+banana
+apple
+```
+
+#### get the FileB content not present in FileA
+
+NR = total record number  
+FNR = file number of row 
+
+1. first, recording the 1st column `$1` of file1.txt in an array `a`. 
+2. second, `($1 in a)`, the `$1` is the 1st column value of file2.txt. The `$1` is checked if it's present in the array `a`. 
+3. `!` is negating. 
+ 
+```
+awk -F'\t' 'NR==FNR {a[$1]++;next;}!($1 in a)' file1.txt file2.txt 
+banana
+apple
+```
+
+#### get the FileA content not present in FileA 1st column 
+
+```
+awk -F'\t' 'NR==FNR {a[$1]++;next;}!($1 in a)' file2.txt file1.txt 
+lemon	12
+watermelon	15
+mango	15
+```
 
 ## add new column by awk 
 
