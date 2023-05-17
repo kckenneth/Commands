@@ -475,6 +475,20 @@ watermelon	15
 mango	15
 ```
 
+## Remove a string by pattern 
+
+```
+cat test1.txt 
+grill menu	context
+mexican grill menu	organization
+grill menu in orlando	context
+
+awk -F'\t' '!/^grill menu\t/' test1.txt
+mexican grill menu	organization
+grill menu in orlando	context
+```
+
+
 ## add new column by awk 
 
 add `-v` for OFS. 
