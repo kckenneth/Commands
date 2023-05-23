@@ -522,6 +522,16 @@ cat test.txt | sed -e 's/)/\//'
 apple/,toOrange(0)(),
 ```
 
+#### replace 's apostrophe s by sed
+
+use the double quote 
+
+```
+cat test.txt | sed -e "s/'s/%27/g"
+argentina%27 women national football team
+brazil%27 woman
+```
+
 ## To lower string by awk 
 
 https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash 
