@@ -153,3 +153,19 @@ int main(){
 ```
 In this example, the `&` is close to the type `int` and we're directly modifying the variable `obj` content. 
 
+## struct Vs class
+
+as far as I understand, `struct` is an object which can have its attributes, which are usually static. `class` is an object that can have statics as well as function inside the class. Imagine a cassette player, the cassette is a `struct` which doesn't have any functions. It has its attributes such as 1. rectangular in size, 2. two holes, 3. magnetic tape, etc. 
+
+A cassette player `class` has its attributes such as square, rectangular in size, but it also has the function that can play another object, eg a cassette. 
+
+```
+struct {
+  int width, height;
+} cassette;
+
+class {
+  int width, height;
+  int area {return width * height};
+} player;
+```
