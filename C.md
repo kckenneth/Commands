@@ -160,12 +160,25 @@ as far as I understand, `struct` is an object which can have its attributes, whi
 A cassette player `class` has its attributes such as square, rectangular in size, but it also has the function that can play another object, eg a cassette. 
 
 ```
-struct {
+struct Cassette {
   int width, height;
 } cassette;
 
-class {
+class Player {
   int width, height;
   int area {return width * height};
 } player;
+```
+
+## scope operator :: 
+
+https://cplusplus.com/doc/tutorial/classes/ 
+
+If the class has a function, we can use `::` scope operator to set the value. 
+
+```
+void Player player::area(int x, int y) {
+    width = x;
+    height = y;
+}
 ```
