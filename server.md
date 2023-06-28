@@ -54,3 +54,13 @@ Instead of setting up at the `/etc/hosts`, you can also set up in `~/.ssh/config
 Host <nickname>
  HostName <hostname>
 ```
+
+### Check which ports are being used 
+
+```
+sudo lsof -i -P -n | grep LISTEN
+master     2409        root   13u  IPv4     45923      0t0  TCP 127.0.0.1:25 (LISTEN)
+master     2409        root   14u  IPv6     45924      0t0  TCP [::1]:25 (LISTEN)
+sshd       9148        root    3u  IPv4 200069285      0t0  TCP *:22 (LISTEN)
+sshd       9148        root    4u  IPv6 200069287      0t0  TCP *:22 (LISTEN)
+```
