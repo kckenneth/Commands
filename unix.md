@@ -532,6 +532,14 @@ argentina%27 women national football team
 brazil%27 woman
 ```
 
+#### remove `^M` caret M 
+
+In view mode, `vi`, sometimes Unix file can have a caret M at the end of the string. To remove
+
+```
+sed -e "s/\r//g" file > newfile
+```
+
 ## To lower string by awk 
 
 https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash 
