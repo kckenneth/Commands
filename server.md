@@ -64,3 +64,17 @@ master     2409        root   14u  IPv6     45924      0t0  TCP [::1]:25 (LISTEN
 sshd       9148        root    3u  IPv4 200069285      0t0  TCP *:22 (LISTEN)
 sshd       9148        root    4u  IPv6 200069287      0t0  TCP *:22 (LISTEN)
 ```
+
+### Check which processes are being run and kill 
+
+```
+ps aux | grep "python"
+sudo kill -u yahoo kill -s SIGINT xxxxx
+
+OR
+
+top            # to check the PID
+kill -9 <PID>
+```
+
+
