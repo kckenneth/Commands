@@ -182,3 +182,18 @@ void Player player::area(int x, int y) {
     height = y;
 }
 ```
+
+## class inheritance 
+
+https://stackoverflow.com/questions/19898920/use-of-colon-after-class-name-in-c
+
+```
+class ApplicationUI : public QObject
+```
+
+```
+It means that ApplicationUI inherits all methods and member variables from the class QObject. The use of public means that the public methods and members of QObject are also public in ApplicationUI.
+```
+
+
+
