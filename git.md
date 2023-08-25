@@ -132,6 +132,19 @@ git add myfile.txt
 git commit -m "fixed merge conflicts"
 ```
 
+### Get the latest on remote branch 
+
+If you clone the branch and work on the branch locally and make some changes. Someone also updated the same branch on git repo. So you want to pull the latest branch from the repo to your local work station. You need to `stash` your changes until you can pull. 
+
+```
+git clone -b remote_branch https://git.myrepository.com/myportfolio.git
+
+## work on remote_branch locally, make some changes
+
+git stash
+git pull origin remote_branch
+```
+
 ## Working on a repo from web and updating locally
  
 ### 1. Find the git repo that you want to work on. Git clone locally. 
