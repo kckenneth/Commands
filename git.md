@@ -195,7 +195,23 @@ git branch -d myBranch                # delete myBranch locally
  ```
  git log -p -S "movie_watch_online_4" us_web.jabba
  ```
- 
+
+## Reverting to the previous commit 
+
+There's a particular commit on the branch in the remote repo that you want to work on, this is what you need to do. 
+1. git clone the remote branch locally
+2. search which commit you want to revert to
+3. revert to the commit by commit ID
+
+```
+git clone -b remote_branch https://github.com/kckenneth/Commands.git
+cd Commands
+git status         # can check the branch
+git log            # check which commit you want to revert to
+git reset --hard 0accdefghi3a034abba82388bc3804ead1a9179ef
+```
+
+
  
 
 
