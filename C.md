@@ -195,5 +195,25 @@ class ApplicationUI : public QObject
 It means that ApplicationUI inherits all methods and member variables from the class QObject. The use of public means that the public methods and members of QObject are also public in ApplicationUI.
 ```
 
+## Check the core.xxxx 
+
+```
+gdb -c core.21359 /home/y/bin/ydisc
+
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-120.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/y/bin64/ydisc...done.
+[New LWP 21383]
+[New LWP 21387]
+```
+
+
 
 
