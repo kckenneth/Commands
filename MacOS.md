@@ -39,3 +39,15 @@ Start the jupyter notebook
 ```
 jupyter notebook
 ```
+
+# Run jupyter notebook in virtual environment
+
+```
+python3 -m venv my-env
+source ./my-env/bin/activate
+
+pip install nltk
+python uninstall ipykernel
+python -m ipykernel install --user --name=my-env     # this will let the virtual environment 'my-env' available as kernel in jupyter notebook
+```
+
