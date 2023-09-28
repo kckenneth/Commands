@@ -44,3 +44,10 @@ If you start the container and want to exit the container without stopping the c
 ```
 ctrl+p ctrl+q
 ```
+
+## Docker image pruning 
+
+```
+# We build docker image daily and need to prune useless images.
+  sudo docker image prune -f -a --filter "until=168h" #7*24=168h
+```
