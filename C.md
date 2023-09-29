@@ -33,6 +33,33 @@ int calculate(int sum){
     return 0;
  }
  ```
+
+## call methods in other class, by `this` 
+
+https://stackoverflow.com/questions/983310/calling-a-method-from-another-method-in-the-same-class-in-c 
+
+Sometimes you have methods in other class that you want to use in a new class. eg
+
+```
+void A::a(){
+   do stuff;
+}
+
+void B::b(){
+   a();
+   do stuff;
+}
+```
+In this case, you expect the method `a()` in the function `B` will call the method from the function `A`. It is not. It's like you're creating a new method `a()` inside the function `void B`. So to call the other function as a method in the function `B`, you'd use `this->` 
+
+```
+void B::b(){
+   this->a();
+   do stuff;
+}
+```
+
+
  
  ## `.` dot and `->` arrow operator 
  
