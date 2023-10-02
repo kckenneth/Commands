@@ -34,7 +34,7 @@ There's only `1.4G` available in `/var`. But there's `321G` available in `/home`
 ```
 sudo rm -rf /var/lib/docker
 sudo mkdir -p /home/docker
-sudo ln -s /home/docker /var/lib/docker
+sudo ln -s /home/docker /var/lib/docker       # ln -s <actual directory> <link to actual dir in turquoise color>
 ```
 
 # docker container
