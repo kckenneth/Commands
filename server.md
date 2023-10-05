@@ -77,4 +77,23 @@ top            # to check the PID
 kill -9 <PID>
 ```
 
+### Check how many processes are spun off from the parent script by `ps wafux`
+
+```
+bash-4.2# ps wafux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     19344  0.0  0.0  13428  1956 pts/4    Ss   20:18   0:00 bash
+root     21030  0.0  0.0  53328  1760 pts/4    R+   21:10   0:00  \_ ps wafux
+root     27972  0.0  0.0  13424   872 pts/2    Ss+  Feb13   0:00 bash
+root     27124  0.0  0.0  13424   864 pts/1    Ss+   2022   0:00 bash
+root         1  0.0  0.0  13292   780 pts/0    Ss+   2021   0:03 /bin/bash /tmp/bin/init_startup.sh --region apac --enable_prod true --enable_bucket none
+root        50  0.0  0.0   8568   576 ?        Ss    2021   7:41 /home/y/sbin/ycron -s
+root     20852  0.0  0.0   8568   504 ?        S    21:04   0:00  \_ /home/y/sbin/ycron -s
+root     20855  0.0  0.0   9568  1136 ?        Ss   21:04   0:00      \_ /bin/sh /home/y/var/qis/server/bin/run_fetcher.sh
+root     20859  0.0  0.0 131472  4356 ?        S    21:04   0:00          \_ sudo /usr/bin/python3 /home/y/var/qis/server/src/source_fetcher.py -f /home/y/var/qis/server/fetche
+root     20860  0.0  0.0 197844 18088 ?        Sl   21:04   0:00              \_ /usr/bin/python3 /home/y/var/qis/server/src/source_fetcher.py -f /home/y/var/qis/server/fetcher
+root     20867  0.0  0.0  86816 19660 ?        S    21:04   0:00                  \_ /usr/local/bin/perl -w /usr/local/bin/yinst install qp_data_configs -br test -dryrun -tag s
+root     21028  0.8  0.0 319256 24136 ?        Sl   21:10   0:00                      \_ /usr/bin/python -tt /bin/repoquery --qf %{VERSION}-%{RELEASE} yinst
+root        51  0.0  0.0   5972   292 pts/0    S+    2021   0:00 tail -f /dev/null
+```
 
