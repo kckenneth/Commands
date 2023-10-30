@@ -225,6 +225,8 @@ awk -F'\t' '{s+=$2}END{print s}' file.txt
 
 ## count the frequency of a string 
 
+### Note: Better use a single quote with awk command
+
 In `awk`,
 
 `$0` = the entire string 
