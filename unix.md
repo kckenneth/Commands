@@ -372,6 +372,14 @@ new.txt
 3 \t strawberry
 ```
 
+## print the number of fields (NF) or last field 
+
+Since NF is the number of field, using the `$` will print the last field. For penultimate field, use `$(NF-1)`
+
+```
+awk -F'\t' '{print $NF}'
+awk -F'\t' '{print $(NF-1)}'
+```
 
 ## check the value 
 
