@@ -243,6 +243,7 @@ Reading symbols from /home/y/bin64/ydisc...done.
 
 ## string::npos 
 
+https://cplusplus.com/reference/string/string/find/ 
 https://stackoverflow.com/questions/3827926/what-does-stringnpos-mean-in-this-code
 
 It's the `not found position` for mnemonic, usually used in finding the index position of the string. 
