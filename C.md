@@ -241,6 +241,26 @@ Reading symbols from /home/y/bin64/ydisc...done.
 [New LWP 21387]
 ```
 
+## string::npos 
+
+https://stackoverflow.com/questions/3827926/what-does-stringnpos-mean-in-this-code
+
+It's the `not found position` for mnemonic, usually used in finding the index position of the string. 
+
+```
+std::string s1 = 'apple';
+std::string s2 = 'app';
+
+string::size_type found = s1.find(s2);
+if (found != string:npos){
+    cout << "s2 string found in s1 at the start position of" << found << endl;
+}
+
+## probable result since I didn't compile the code
+s2 string found in s1 at the start position of 0.
+```
+
+In this code snippet, the s2 value `app` is searched in s1. If it's found, the result `found` will have an index value. If it's not, it'd be `-1` or some maximum number possible. Since the s2 `app` was found in s1 `apple`, and its index is `0`, the variable `found` = `0`. So `string::npos` is `-1` or some maximum number possible, we were saying if the index position is not equal to `-1`, which means there's an index position found, then we'd generate the output.  
 
 
 
