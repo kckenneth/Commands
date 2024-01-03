@@ -49,5 +49,12 @@ source ./my-env/bin/activate
 pip install nltk
 python uninstall ipykernel
 python -m ipykernel install --user --name=my-env     # this will let the virtual environment 'my-env' available as kernel in jupyter notebook
+
+# install tensorflow by pip
+# https://www.tensorflow.org/install/pip#macos
 ```
+
+You'd install all the necessary lib in `my-env`. When you run `jupyter notebook`, you need to separately execute the command in another terminal. You cannot execute `jupyter notebook` inside `my-env` virtual environment. 
+
+After jupyter notebook launch, you can choose the `my-env` kernel`. 
 
