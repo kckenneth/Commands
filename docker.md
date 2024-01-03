@@ -51,3 +51,9 @@ ctrl+p ctrl+q
 # We build docker image daily and need to prune useless images.
   sudo docker image prune -f -a --filter "until=168h" #7*24=168h
 ```
+
+## Checking inside docker without logging in
+
+```
+cat local | sudo docker exec -i test_qis_us_prod bash -c '/qis/tools/scrape.py -E' > /tmp/health_check_result_us.txt
+```
