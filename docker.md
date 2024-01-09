@@ -57,3 +57,12 @@ ctrl+p ctrl+q
 ```
 cat local | sudo docker exec -i test_qis_us_prod bash -c '/qis/tools/scrape.py -E' > /tmp/health_check_result_us.txt
 ```
+
+## Removing dead, removal in progress containers
+
+```
+sudo ls -alh /var/lib/docker/containers                 # check the containers id
+sudo rm -rf /var/lib/docker/containers/<container_ID>
+sudo service docker stop                                # need to restart the docker
+sudo service docker start
+```
