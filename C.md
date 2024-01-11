@@ -263,5 +263,24 @@ s2 string found in s1 at the start position of 0.
 
 In this code snippet, the s2 value `app` is searched in s1. If it's found, the result `found` will have an index value. If it's not, it'd be `-1` or some maximum number possible. Since the s2 `app` was found in s1 `apple`, and its index is `0`, the variable `found` = `0`. So `string::npos` is `-1` or some maximum number possible, we were saying if the index position is not equal to `-1`, which means there's an index position found, then we'd generate the output.  
 
+## tempate <typename foo>
+
+In C++, `template` can take any of `typename`. Eg
+
+```
+template <typename t>
+void myfunc(t x, t y){
+  return x+y
+}
+
+void main()
+{
+  std::cout << myfunc(int 1, int 2) << std::endl;       # will get 3
+  std::cout << myfunc(char a, char b) << std::endl;     # will get ab
+}
+```
+
+So intead of defining `myfunc` function twice with `int` and `char`, we can use `typename` which can be `int` or `char` depending on what you define when you call the `myfunc` function.
+
 
 
