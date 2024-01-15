@@ -157,7 +157,7 @@ In this situation, the variable `k` will have the value of `0x000542` which is a
 int *k;
 ```
 
-Can we assign the interger value to `*k`. We cannot. We cannot do `*k = 2`. It doesn't make sense. We need to store the memory address. So what we need to do is,
+To store the memory address, so what we need to do is,
 ```
 int *k;
 k = &j;
