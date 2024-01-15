@@ -144,7 +144,28 @@ In line 3, since the variable `k` is on the left side of the `=`, its memory add
 |  j  | 0x000542   |    --> has the value of `2` at the address
 ```
 
-But the 
+Now let's look at the pointer assignment. This time, we don't want to store the value at the memory address. We want to store another memory address at the current memory address. Like this. 
+
+```
+|  k  | 0x000134   |    --> has the value of `0x000542` at the address
+|  j  | 0x000542   |    --> has the value of `2` at the address
+```
+
+In this situation, the variable `k` will have the value of `0x000542` which is a memory address. We know that the memory address is `j's`. But it can be any memory addresses. So we need to let the compiler know that the variable `k` will store the memory address. 
+
+```
+int *k;
+```
+
+Can we assign the interger value to `*k`. We cannot. We cannot do `*k = 2`. It doesn't make sense. We need to store the memory address. So what we need to do is,
+```
+int *k;
+k = &j;
+```
+By adding a unary operator `&` in front of `j`, we're asking the compiler to look up the memory address of `j`, and assign the memory adderss which is `rvalue` right now, to the pointer `k`. 
+
+
+More on pointer examples. 
 
 https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers  
 https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga  
