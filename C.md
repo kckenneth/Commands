@@ -106,6 +106,46 @@ void B::b(){
 ## address variable, address of, content of address 
 ## int *ptr, &ref, *ptr
 
+https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
+
+This is a good chapter on the usage of pointer explanation. Whenever we use the equal `=`, there's `lvalue (left value)` and `rvalue (right value)`. eg, 
+
+```
+k = 5;
+```
+In this statement, there're something that I could understand based on what I have studied. 
+1. There's a mapping on the `lvalue` on the variable table.
+2. On that table, the right side is the memory address of the variable `k`.
+3. After the mapping, the compiler will go and update the value of `5` in the memory address of `k`.
+
+```
+|  k  | 0x000134    |     # imaginary table on the variable k and its memory address on the right side.
+```
+
+In the memory address `0x000134`, the value of `5` will be updated. 
+
+Now imagine, 
+```
+k = 5;   <--- line 1
+j = 2;   <--- line 2
+k = j;   <--- line 3
+```
+After line 1 and 2, the table will look like this. 
+```
+|  k  | 0x000134   |    --> has the value of `5` at the address
+|  j  | 0x000542   |    --> has the value of `2` at the address
+```
+Each memory address will have `5` and `2` value respectively. 
+
+In line 3, since the variable `k` is on the left side of the `=`, its memory address won't be touched. The variable `j` is on the right side of the `=`, the compiler will go and check its value in the memory address at `0x000542`. The compiler finds the value of `2` at the memory address at `0x000542`. The compiler will then update the value `2` at the memory address of `k` which is `0x000134`. The table after the line 3 will look the same. But the value at the memory address at `0x000134` will change to `2`. 
+
+```
+|  k  | 0x000134   |    --> has the value of `2` at the address
+|  j  | 0x000542   |    --> has the value of `2` at the address
+```
+
+But the 
+
 https://stackoverflow.com/questions/36962658/what-exactly-is-the-purpose-of-the-asterisk-in-pointers  
 https://dev.to/sandordargo/how-to-use-ampersands-in-c-3kga  
 https://www.w3schools.com/cpp/cpp_pointers_modify.asp  
