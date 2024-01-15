@@ -108,7 +108,9 @@ void B::b(){
 
 https://pdos.csail.mit.edu/6.828/2014/readings/pointers.pdf
 
-This is a good chapter on the usage of pointer explanation. Whenever we use the equal `=`, there's `lvalue (left value)` and `rvalue (right value)`. eg, 
+This is a good chapter on the usage of pointer explanation. Whenever we use the equal `=`, there's `lvalue (left value)` and `rvalue (right value)`. 
+
+When we declare a variable we set aside a spot in memory to hold the value of the appropriate type. Once that is done the name of the variable can be interpreted in one of two ways. When used on the left side of the assignment operator, the compiler interprets it as the memory location to which to move that value resulting from evaluation of the right side of the assignment operator. But, when used on the right side of the assignment operator, the name of a variable is interpreted to mean the contents stored at that memory address set aside to hold the value of that variable.
 
 ```
 k = 5;
