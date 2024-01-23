@@ -650,3 +650,13 @@ function check_place_name {
 
 check_place_name kbplace $overrideList
 ```
+
+### Delimiter
+
+If you want to add a caret delimiter `^`, in terminal, press `ctrl+v`. That will make the caret ready on screen. `^`. Then press whichever delimiter you want. If you want `^C`, you'll do like this
+
+```
+ctrl+v --> ctrl+c
+```
+
+For `^B`, you can directly do by `ctrl+b`. 
