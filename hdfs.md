@@ -26,5 +26,6 @@ For running oozie job in hadoop, the mapper script doesn't need to be a full pat
 
 ```
 hdfs dfs -copyToLocal /projects/xxx.tgz
-vi xxx.tgz
+vi xxx.tgz            # check the content or
+tar -tf xxx.tgz | grep "apple.txt"
 ```
