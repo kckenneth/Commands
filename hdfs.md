@@ -21,3 +21,10 @@ For running oozie job in hadoop, the mapper script doesn't need to be a full pat
     <error to="email_error" />
   </action>
 ```
+
+### Check the content of .tgz file
+
+```
+hdfs dfs -copyToLocal /projects/xxx.tgz
+vi xxx.tgz
+```
