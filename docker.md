@@ -37,6 +37,16 @@ sudo mkdir -p /home/docker
 sudo ln -s /home/docker /var/lib/docker       # ln -s <actual directory> <link to actual dir in turquoise color>
 ```
 
+In short, the `/home/docker` is the actual directory where the physical file exists. The shortcut `/var/lib/docker` is an alias that will direct to the actual `/home/docker` directory. So when you list them in `/home/docker` directory, you'd see like this. 
+
+```
+ls -a
+lrwxr-xr-x   1 kchen08  staff    37B Feb 12 17:37 /var/lib/docker -> /home/docker
+-rw-r--r--   1 kchen08  staff    27B Feb 12 17:37 testing.txt
+```
+
+The shortcut `/var/lib/docker` has the `l` for link. 
+
 # docker container
 
 If you start the container and want to exit the container without stopping the container running, execute one after another in shell 
