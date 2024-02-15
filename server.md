@@ -128,3 +128,18 @@ root     21028  0.8  0.0 319256 24136 ?        Sl   21:10   0:00                
 root        51  0.0  0.0   5972   292 pts/0    S+    2021   0:00 tail -f /dev/null
 ```
 
+### curl 
+
+```
+curl -s  http://qis-k8s-nar-staging.v2-canary1-bf1.omega.yahoo.com:4080/versioninfo
+
+curl -s  http://qis-k8s-nar-staging.v2-canary1-bf1.omega.yahoo.com:4080/v2/qis?query=donald%20trump&intl=us&site=yahoo&lang=en&src=web&appid=&usePreciseLocation=1&mtestid=&userIPWoeID=&userDefaultULMWoeID=2502265&entityFocus=&qssSuggestion=&qssRewrite=0&preview=&debug=qlas%2Cqp%2Cdh&format=json
+
+-------
+curl -s  https://mtls-nar.qis-k8s-canary.search-web-qlas-k8s.v2-canary1-bf1.omega.yahoo.com:4443/versioninfo
+
+curl -s  https://mtls-nar.qis-k8s-canary.search-web-qlas-k8s.v2-canary1-bf1.omega.yahoo.com:4443/v2/qis?query=donald%20trump&intl=us&site=yahoo&lang=en&src=web&appid=&usePreciseLocation=1&mtestid=&userIPWoeID=&userDefaultULMWoeID=2502265&entityFocus=&qssSuggestion=&qssRewrite=0&preview=&debug=qlas%2Cqp%2Cdh&format=json
+```
+
+For `mtls`, I thought it's not responding means it has an issue with qis running. But after PE restarted, and `qis-smoke-test` passed, I still cannot curl on that. 
+
