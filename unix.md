@@ -550,6 +550,22 @@ In view mode, `vi`, sometimes Unix file can have a caret M at the end of the str
 sed -e "s/\r//g" file > newfile
 ```
 
+#### replace in-place by `sed`
+
+```
+cat test.txt
+what to do yesterday
+today i'm studying
+yesterday will go to library
+
+sed -i 's|yesterday|tomorrow|' test.txt          # the last vertical line after tomorrow is crucial
+
+cat test.txt
+what to do tomorrow
+today i'm studying
+tomorrow will go to library
+```
+
 ## To lower string by awk 
 
 https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash 
