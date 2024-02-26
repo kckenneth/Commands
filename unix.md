@@ -316,6 +316,19 @@ lychee
 orange
 ```
 
+## Check if the column contains substring 
+
+```
+cat test.txt
+2021 competition    game    garden
+2022 winner         game    garden
+2021                year    park
+
+awk '(index($1,"2021") !=0) {print}' test.txt
+2021 competition    game    garden
+2021                year    park
+```
+
 ## display nth line 
 
 https://www.theunixschool.com/2012/12/how-to-print-every-nth-line-in-file-in.html 
