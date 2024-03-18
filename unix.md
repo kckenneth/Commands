@@ -498,6 +498,30 @@ watermelon	15
 mango	15
 ```
 
+#### get the FileB content based on FileA 1st column
+
+```
+FileA
+apple
+orange
+lemon
+
+FileB
+apple 10 walmart
+apple 15 target
+lemon 12 target
+strawberry 20 walmart
+```
+
+```
+awk -F'\t' 'NR==FNR{seen[$1]; next} $1 in seen' FileA FileB > common
+
+common
+apple 10 walmart
+apple 15 target
+lemon 12 target
+```
+
 ## Remove a string by pattern 
 
 ```
