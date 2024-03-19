@@ -143,3 +143,9 @@ curl -s  https://mtls-nar.qis-k8s-canary.search-web-qlas-k8s.v2-canary1-bf1.omeg
 
 For `mtls`, I thought it's not responding means it has an issue with qis running. But after PE restarted, and `qis-smoke-test` passed, I still cannot curl on that. 
 
+### Checking disk space 
+
+```
+cd /
+du -chs *            # * will list which directory
+```
