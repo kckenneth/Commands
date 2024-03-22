@@ -37,7 +37,7 @@ sudo mkdir -p /home/docker
 sudo ln -s /home/docker /var/lib/docker       # ln -s <actual directory> <link to actual dir in turquoise color>
 ```
 
-In short, the `/home/docker` is the actual directory where the physical file exists. The shortcut `/var/lib/docker` is an alias that will direct to the actual `/home/docker` directory. So when you list them in `/home/docker` directory, you'd see like this. 
+In short, the `/home/docker` is the actual directory where the physical file exists. The shortcut `/var/lib/docker` is an alias that will direct to the actual `/home/docker` directory. So when you list them in `/var/lib/docker` directory, you'd see like this. 
 
 ```
 ls -a
