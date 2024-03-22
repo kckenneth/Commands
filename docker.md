@@ -10,7 +10,7 @@ sudo docker run -it --name build_container -v `pwd`:/workspace -v $HOME:/root -v
 
 whatever path you're on, `pwd`, the content of the `pwd` will be available in the `build_container` `/workspace` directory. 
 
-## Docker default path
+## Docker default path and symbolic link
 
 Docker default path is `/var/lib/docker`. You can check if the space is enough in the path. If not, you can create a softlink `/var/lib/docker` to where there's enough space. 
 
@@ -48,6 +48,12 @@ lrwxr-xr-x   1 kchen08  staff    37B Feb 12 17:37 /var/lib/docker -> /home/docke
 ```
 
 The shortcut `/var/lib/docker` has the `l` for link. 
+
+## unlink symbolic link
+
+```
+unlink /var/lib/docker      # basically removing the path alias
+```
 
 # docker container
 
