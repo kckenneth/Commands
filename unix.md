@@ -713,3 +713,10 @@ ctrl+v --> ctrl+c
 ```
 
 For `^B`, you can directly do by `ctrl+b`. 
+
+### Set chown owner 
+
+```
+sudo chown root:root <folder_name|filename>
+sudo chown -R root:root *                     # recursively setting all the path down
+```
