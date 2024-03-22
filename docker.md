@@ -37,6 +37,8 @@ sudo mkdir -p /home/docker
 sudo ln -s /home/docker /var/lib/docker       # ln -s <actual directory> <link to actual dir in turquoise color>
 ```
 
+You first need to remove `/var/lib/docker` path completely. You DO NOT need to create `mkdir -p /var/lib/docker` at all. Creating will cause a problem. Basically, we want to use `/var/lib/docker` as a path alias. So we MUST NOT create a directory of `/var/lib/docker` after removing the path. 
+
 In short, the `/home/docker` is the actual directory where the physical file exists. The shortcut `/var/lib/docker` is an alias that will direct to the actual `/home/docker` directory. So when you list them in `/var/lib/docker` directory, you'd see like this. 
 
 ```
