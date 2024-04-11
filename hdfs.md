@@ -35,4 +35,6 @@ tar -tf xxx.tgz | grep "apple.txt"
 ```
 sudo -u qlasbld -s
 hdfs dfs -du -h /projects/qlas
+
+hdfs dfs -rm -r -skipTrash /projects/qlas/qlas_synonym/US/202212*
 ```
