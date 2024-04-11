@@ -29,3 +29,10 @@ hdfs dfs -copyToLocal /projects/xxx.tgz
 vi xxx.tgz            # check the content or
 tar -tf xxx.tgz | grep "apple.txt"
 ```
+
+### Check hadoop space 
+
+```
+sudo -u qlasbld -s
+hdfs dfs -du -h /projects/qlas
+```
