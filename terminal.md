@@ -177,4 +177,9 @@ find . -type f -name '*.*'  -not -path  "./.git/*" -exec wc -l {} +
 
 # only .cc file types
 find . -type f -name '*.cc'  -not -path  "./.git/*" -exec wc -l {} +
+
+# more useful all programming 
+find .  -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hh' -o -name 'Makefile' -o -name '*.py' -o -name '*.java' -o -name '*.pl' -o -name '*.sh' -not -path  "./.git/*" | xargs wc -l
+
+find . '*.*' -not -path  "./.git/*" | xargs wc -l
 ```
