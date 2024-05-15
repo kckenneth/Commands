@@ -168,3 +168,13 @@ True if string1 sorts after string2 lexicographically.
 arg1 OP arg2
 OP is one of ‘-eq’, ‘-ne’, ‘-lt’, ‘-le’, ‘-gt’, or ‘-ge’. These arithmetic binary operators return true if arg1 is equal to, not equal to, less than, less than or equal to, greater than, or greater than or equal to arg2, respectively. Arg1 and arg2 may be positive or negative integers. When used with the [[ command, Arg1 and Arg2 are evaluated as arithmetic expressions (see Shell Arithmetic).
 ```
+
+## Count number of lines for specific files 
+
+```
+# all file types
+find . -type f -name '*.*'  -not -path  "./.git/*" -exec wc -l {} +
+
+# only .cc file types
+find . -type f -name '*.cc'  -not -path  "./.git/*" -exec wc -l {} +
+```
