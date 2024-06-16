@@ -357,4 +357,16 @@ void main()
 So intead of defining `myfunc` function twice with `int` and `char`, we can use `typename` which can be `int` or `char` depending on what you define when you call the `myfunc` function.
 
 
+## Vector
+
+```
+std::vector<float> x(10, 1);
+```
+
+This is prepopulating the vector size `10` with a value of `1`. 
+
+```
+[1,1,1,1,1,1,1,1,1,1]
+```
+
 
