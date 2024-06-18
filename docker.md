@@ -84,3 +84,13 @@ sudo rm -rf /var/lib/docker/containers/<container_ID>
 sudo service docker stop                                # need to restart the docker
 sudo service docker start
 ```
+
+OR 
+
+```
+sudo service docker stop
+sudo -i
+cd /var/lib/docker/containers
+rm -rf <container id>
+sudo service docker start
+```
