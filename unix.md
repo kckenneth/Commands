@@ -629,6 +629,17 @@ orange
 lemon juice
 ```
 
+## Check which column matches the string 
+
+```
+cat test.txt
+col1 col2 col3 col4
+apple orange lemon strawberry
+
+$ awk -F'\t' '{for(i=1;i<=NF;i++){if ($i ~ /lemon/){print i}}}' daily.tsv
+3
+```
+
 
 ## To delete files except one file 
 
