@@ -731,3 +731,10 @@ For `^B`, you can directly do by `ctrl+b`.
 sudo chown root:root <folder_name|filename>
 sudo chown -R root:root *                     # recursively setting all the path down
 ```
+
+### Rename files 
+
+```
+find . -name "*WIZD-1007*" -exec rename WIZD-1007 WIZD1007 '{}' +
+```
+
