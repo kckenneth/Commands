@@ -738,3 +738,9 @@ sudo chown -R root:root *                     # recursively setting all the path
 find . -name "*WIZD-1007*" -exec rename WIZD-1007 WIZD1007 '{}' +
 ```
 
+### Check file size and total 
+
+```
+du -sh *
+du -sch *     # also total file size
+```
