@@ -744,3 +744,11 @@ find . -name "*WIZD-1007*" -exec rename WIZD-1007 WIZD1007 '{}' +
 du -sh *
 du -sch *     # also total file size
 ```
+
+### Remove files 
+
+```
+if [ -d /opt/y/1.0/var/qis/iyp_client/logs ]; then
+  find /opt/y/1.0/var/qis/iyp_client/logs -type f -mtime +30 -exec rm -f  {} \; 2>&1
+fi
+```
