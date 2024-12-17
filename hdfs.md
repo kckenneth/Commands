@@ -38,3 +38,18 @@ hdfs dfs -du -h /projects/qlas
 
 hdfs dfs -rm -r -skipTrash /projects/qlas/qlas_synonym/US/202212*
 ```
+
+- checking cosmo feeds
+
+```
+hadoop fs -count -v -q -h /projects/search_platforms
+       QUOTA       REM_QUOTA     SPACE_QUOTA REM_SPACE_QUOTA    DIR_COUNT   FILE_COUNT       CONTENT_SIZE PATHNAME
+     488.3 K               0           300 T         275.1 T        3.0 K      485.3 K              8.3 T /projects/search_platforms
+```
+
+- deleting old feeds
+
+```
+hdfs dfs -rm -skipTrash  /projects/search_platforms/qp/datapush/data/stage/*/web/ftdict/qp-datafile-2023.*
+```
+
