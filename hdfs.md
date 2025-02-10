@@ -30,6 +30,44 @@ vi xxx.tgz            # check the content or
 tar -tf xxx.tgz | grep "apple.txt"
 ```
 
+### Check local home directory quota 
+
+```
+/gridtools/generic/bin/homedir-quota
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 1.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 2.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 3.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 4.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 5.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 6.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 7.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 8.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 9.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 10.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 11.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 12.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 13.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 14.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 15.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 16.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 17.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 18.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 19.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 20.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 21.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 22.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 23.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 24.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 25.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 26.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 27.
+Use of uninitialized value $dev in string eq at /gridtools/generic/bin/homedir-quota line 19, <QUOTA> line 28.
+Use of uninitialized value $dev in concatenation (.) or string at /gridtools/generic/bin/homedir-quota line 25.
+Quota for kchen08 on /homes/kchen08 ()
+space quota: 10.00 GiB
+space used: 5.12 GiB (51.2%)
+```
+
 ### Check hadoop space 
 
 ```
