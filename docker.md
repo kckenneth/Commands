@@ -5,7 +5,7 @@
 ```
 
 ```
-sudo docker run -it --name build_container -v `pwd`:/workspace -v $HOME:/root -v /var/lib/sia/:/var/lib/sia --cap-add=SYS_PTRACE --security-opt seccomp=unconfined docker.ouroath.com:4443/ylinux/ylinux7:7.9.14 bash
+sudo docker run -it --name test_container -v `pwd`:/workspace -v $HOME:/root -v /var/lib/sia/:/var/lib/sia --cap-add=SYS_PTRACE --security-opt seccomp=unconfined docker.ouroath.com:4443/containers/rhel7-yinst8-build:latest bash
 ```
 
 whatever path you're on, `pwd`, the content of the `pwd` will be available in the `build_container` `/workspace` directory. 
