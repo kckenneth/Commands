@@ -603,6 +603,14 @@ today i'm studying
 tomorrow will go to library
 ```
 
+replace in-place files under current directory and sub-directories 
+
+```
+find . -type f -exec sed -i 's/p\/earth/p\/mlapi/g' {} +
+
+find . -type f -exec sed -i 's/mlapi\/v2/earth\/v2/g' {} +
+```
+
 ## To lower string by awk 
 
 https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash 
