@@ -609,6 +609,9 @@ replace in-place files under current directory and sub-directories
 find . -type f -exec sed -i 's/p\/earth/p\/mlapi/g' {} +
 
 find . -type f -exec sed -i 's/mlapi\/v2/earth\/v2/g' {} +
+
+# replacing the entire line, but need the slash / to check on the specific model, so need a backslash 
+find . -type f -exec sed -i 's/earth\/v2\/models\/categorizer-gte-ensemble\/infer/mars\/v2\/models\/categorizer-gte-ensemble\/infer/g' {} +
 ```
 
 ## To lower string by awk 
